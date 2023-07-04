@@ -5,48 +5,52 @@
     <meta charset="UTF-8">
     <title>Advanced CSS - Assignment 1</title>
     <style>
-        .link { color: #00FF00; } 
-        .link-group {color :red;}
-        .div-red {color:red}
-        .div-green {color: green}
-        .div-italic {  font-style: normal;
-                    transition: font-style 0.3s;
-                }
-        .div-italic:hover  {font-style: italic;
-        }
-       .new-text:after {
-            content: "-NEW";
-            color: yellow;
-        }
-
+      a[href="https://www.google.com/"]{
+        color:green;
+      }
+      a[href="https://www.google.com/doodles"]{
+        color:green
+      }
+      a[href="https://www.link-group.eu/"]{
+        color:red
+      }
+      div[id="first-div"]>p::after {
+        content:"-NEW";
+        color: yellow;
+      }
+      body>p:last-of-type:hover {
+        font-style: italic;
+      }
+      div[id="second-div"]>p:nth-child(odd){
+        color:green;
+      }
+      div[id="second-div"]>p:nth-child(even){
+        color:red;
+      }
     </style>
 </head>
 
 <body>
     <h1>Main Heading</h1>
     <p>Paragraph 1</p>
-
-
-    <a class="link" href="https://www.google.com/">Google</a>
-    <a class="link" href="https://www.google.com/doodles">Google Doodles</a>
-    <a class="link-group" href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.google.com/doodles">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
     <div id="first-div">
         <h2>Subheading</h2>
-      
-      
-        <p class="new-text">Paragraph 2</p>
-        <p class="new-text">Paragraph 3</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
         <div id="second-div">
             <h3>Sub subheading</h3>
-            <p class="div-red">Paragraph 4</p>
-            <p class="div-green">Paragraph 5</p>
-            <p class="div-red">Paragraph 6</p>
-            <p class="div-green">Paragraph 7</p>
-            <p class="div-red">Paragraph 8</p>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>Paragraph 7</p>
+            <p>Paragraph 8</p>
         </div>
     </div>
     <p>Paragraph 9</p>
-    <p class="div-italic">Paragraph 10</p>
+    <p>Paragraph 10</p>
 </body>
 
 </html>
