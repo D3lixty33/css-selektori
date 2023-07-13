@@ -1,0 +1,54 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float: left; 
+    clear: left;
+}
+
+.box {
+    height: 150px;
+    background-color:blue;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.row {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .column {
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .column {
+        width: 100%;
+    }
+}
